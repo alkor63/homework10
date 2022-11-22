@@ -17,7 +17,7 @@ public class Main {
         printBook(book1);
         printBook(book2);
         book2.setPublicationYear(1994);
-        System.out.println("\nЭту книгу переиздали, теперь:");
+        System.out.println("\n Эту книгу переиздали, теперь:");
         printBook(book2);
 
         System.out.println("\n  *** Homework is ready ! ***");
