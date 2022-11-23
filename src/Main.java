@@ -2,7 +2,7 @@ public class Main {
 
     public static void printBook(Book book) {
         System.out.println("-----------------------------");
-        System.out.println("Автор: "+ book.authorName.getName()+" "+ book.authorName.getSurname());
+        System.out.println("Автор: "+ book.getAuthorName().getName()+" "+ book.getAuthorName().getSurname());
         System.out.println("Книга: "+ book.getBookName());
         System.out.println("Год издания: "+ book.getPublicationYear());
     }
