@@ -1,7 +1,6 @@
 public class Book {
     private final String bookName;
-//    private
-    final Author authorName;
+    private final Author authorName;
     private int publicationYear;
 
     public Book(String bookName, Author authorName, int publicationYear) {
@@ -15,9 +14,7 @@ public class Book {
     public String getBookName(){
         return bookName;
     }
-    public Author getAuthorName(){
-        return authorName;
-    }
+    public Author getAuthorName(){  return authorName;  }
     public int getPublicationYear(){
         return publicationYear;
     }
