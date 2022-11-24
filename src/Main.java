@@ -1,24 +1,28 @@
 public class Main {
 
-    public static void printBook(Book book) {
-        System.out.println("-----------------------------");
-        System.out.println("Автор: "+ book.getAuthorName().getName()+" "+ book.getAuthorName().getSurname());
-        System.out.println("Книга: "+ book.getBookName());
-        System.out.println("Год издания: "+ book.getPublicationYear());
-    }
-
     public static void main(String[] args) {
 
         Author author1 = new Author("Александр", "Дюма");
         Author author2 = new Author("Иван", "Ефремов");
         Book book1 = new Book("Три мушкетёра", author1, 1975);
         Book book2 = new Book("Таис Афинская", author2, 1992);
+        Book book3 = new Book("Таис Афинская", author2, 1994);
 
-        printBook(book1);
-        printBook(book2);
+        System.out.println(book1.toString());
+        System.out.println(author1);
+
+        System.out.println(book2.toString());
+        System.out.println("Сравниваем книги book2 & book3");
+        System.out.println("hashCode book2 = " + book2.hashCode());
+        System.out.println("hashCode book3 = " + book3.hashCode());
+        System.out.println("Результат сравнения equals: " + book2.equals(book3));
         book2.setPublicationYear(1994);
         System.out.println("\n Эту книгу переиздали, теперь:");
-        printBook(book2);
+        System.out.println(book2.toString());
+        System.out.println("Сравниваем книги book2 & book3");
+        System.out.println("hashCode book2 = " + book2.hashCode());
+        System.out.println("hashCode book3 = " + book3.hashCode());
+        System.out.println("Результат сравнения equals: " + book2.equals(book3));
 
         System.out.println("\n  *** Homework is ready ! ***");
     }
